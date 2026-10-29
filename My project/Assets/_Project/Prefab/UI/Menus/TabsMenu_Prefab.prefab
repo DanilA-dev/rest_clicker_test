@@ -116,6 +116,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8844882dbf29d164c881e01469a64504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game.UI::_Project.Scripts.UI.View.Tabs.TabsMenuView
+  _onLoad:
+    m_PersistentCalls:
+      m_Calls: []
+  _onReady:
+    m_PersistentCalls:
+      m_Calls: []
   _buttons:
   - {fileID: 3731982020499018287}
   - {fileID: 6534107576439555867}
@@ -601,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7959163786555816677, guid: 5f5979326ab368f4bb8cb26f025a47f6, type: 3}
       propertyPath: m_text
-      value: Weahter
+      value: Weather
       objectReference: {fileID: 0}
     - target: {fileID: 7959163786555816677, guid: 5f5979326ab368f4bb8cb26f025a47f6, type: 3}
       propertyPath: m_fontSize
