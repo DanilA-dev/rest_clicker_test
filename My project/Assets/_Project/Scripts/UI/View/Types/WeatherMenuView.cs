@@ -10,7 +10,6 @@ namespace _Project.Scripts.UI.View.Types
 
         [SerializeField] private Image _icon;
         [SerializeField] private TMP_Text _text;
-        [Tooltip("{0} - temperature, {1} - unit")]
         [SerializeField] private string _format = "Сегодня - {0}{1}";
 
         #endregion

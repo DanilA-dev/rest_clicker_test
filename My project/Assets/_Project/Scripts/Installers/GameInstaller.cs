@@ -19,6 +19,8 @@ namespace _Project.Scripts.Installers
 
         #endregion
 
+        #region Bindings
+
         public override void InstallBindings()
         {
             Container.BindInstance(_currencyConfig);
@@ -29,9 +31,13 @@ namespace _Project.Scripts.Installers
             Container.BindInterfacesTo<RequestQueue>().AsSingle();
 
             Container.Bind<CurrencyModel>().AsSingle();
+            
             Container.BindInterfacesAndSelfTo<ClickerService>().AsSingle();
+            
             Container.BindInterfacesAndSelfTo<WeatherProvider>().AsSingle();
             Container.Bind<BreedsProvider>().AsSingle();
         }
+
+        #endregion
     }
 }

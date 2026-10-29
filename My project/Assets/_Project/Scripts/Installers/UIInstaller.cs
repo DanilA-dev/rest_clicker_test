@@ -19,21 +19,44 @@ namespace _Project.Scripts.Installers
 
         #endregion
 
+        #region Bindings
+
         public override void InstallBindings()
         {
             BindViews();
             BindMenus();
         }
 
+        #endregion
+
         #region Private
 
         private void BindViews()
         {
-            Container.Bind<UIViewContainer>()
-                .FromComponentInNewPrefab(_uiConfig.ViewContainerPrefab)
-                .AsSingle();
+            CreateUIRoot();
+            CreateMenuViews();
+            CreatePoolForClickPopups();
+            CreatePoolForBreedViews();
+        }
 
+        private void CreatePoolForBreedViews()
+        {
+            Container.BindMemoryPool<BreedItemView, BreedItemView.Pool>()
+                .WithInitialSize(_uiConfig.BreedItemPoolSize)
+                .FromComponentInNewPrefab(_uiConfig.BreedItemPrefab)
+                .UnderTransform(ctx => ctx.Container.Resolve<BreedMenuView>().Content);
+        }
 
+        private void CreatePoolForClickPopups()
+        {
+            Container.BindMemoryPool<ClickPopupView, ClickPopupView.Pool>()
+                .WithInitialSize(_uiConfig.ClickPopupPoolSize)
+                .FromComponentInNewPrefab(_uiConfig.ClickPopupPrefab)
+                .UnderTransform(ctx => ctx.Container.Resolve<ClickerMenuView>().PopupContainer);
+        }
+
+        private void CreateMenuViews()
+        {
             foreach (var prefab in _uiConfig.Menus)
             {
                 Container.Bind(prefab.GetType())
@@ -41,16 +64,13 @@ namespace _Project.Scripts.Installers
                     .UnderTransform(ctx => ctx.Container.Resolve<UIViewContainer>().Menus)
                     .AsSingle();
             }
+        }
 
-            Container.BindMemoryPool<ClickPopupView, ClickPopupView.Pool>()
-                .WithInitialSize(_uiConfig.ClickPopupPoolSize)
-                .FromComponentInNewPrefab(_uiConfig.ClickPopupPrefab)
-                .UnderTransform(ctx => ctx.Container.Resolve<ClickerMenuView>().PopupContainer);
-
-            Container.BindMemoryPool<BreedItemView, BreedItemView.Pool>()
-                .WithInitialSize(_uiConfig.BreedItemPoolSize)
-                .FromComponentInNewPrefab(_uiConfig.BreedItemPrefab)
-                .UnderTransform(ctx => ctx.Container.Resolve<BreedMenuView>().Content);
+        private void CreateUIRoot()
+        {
+            Container.Bind<UIViewContainer>()
+                .FromComponentInNewPrefab(_uiConfig.ViewContainerPrefab)
+                .AsSingle();
         }
 
         private void BindMenus()

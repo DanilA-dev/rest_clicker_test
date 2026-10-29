@@ -39,7 +39,7 @@ namespace _Project.Scripts.Breeds
 
             return dto.data
                 .Take(_config.BreedsCount)
-                .Select(Map)
+                .Select(NewBreed)
                 .ToList();
         }
 
@@ -50,14 +50,14 @@ namespace _Project.Scripts.Breeds
             if (dto?.data == null)
                 throw new InvalidOperationException($"Breed {id} response has no data");
 
-            return Map(dto.data);
+            return NewBreed(dto.data);
         }
 
         #endregion
 
         #region Private
 
-        private static Breed Map(BreedDto dto) => new(dto.id, dto.attributes?.name, dto.attributes?.description);
+        private static Breed NewBreed(BreedDto dto) => new(dto.id, dto.attributes?.name, dto.attributes?.description);
 
         #endregion
     }

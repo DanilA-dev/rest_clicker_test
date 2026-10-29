@@ -12,9 +12,13 @@ namespace _Project.Scripts.Installers
 
         #endregion
         
+        #region Bindings
+
         public override void InstallBindings()
         {
             Container.Bind<IAudioManager>().FromInstance(_audioManager).AsSingle();
         }
+
+        #endregion
     }
 }

@@ -101,8 +101,8 @@ namespace _Project.Scripts.UI.Presenter.Types
         {
             for (var i = 0; i < breeds.Count; i++)
             {
-                var breed = breeds[i];
-                var item = _itemPool.Spawn($"{i + 1} - {breed.Name}");
+                Breed breed = breeds[i];
+                BreedItemView item = _itemPool.Spawn($"{i + 1} - {breed.Name}");
                 _items.Add(item);
 
                 item.OnClick
@@ -147,7 +147,7 @@ namespace _Project.Scripts.UI.Presenter.Types
             }
             catch (Exception e)
             {
-                Debug.LogWarning($"Breed {id} request failed: {e.Message}");
+                Debug.Log($"Breed {id} request failed: {e.Message}");
             }
             finally
             {
