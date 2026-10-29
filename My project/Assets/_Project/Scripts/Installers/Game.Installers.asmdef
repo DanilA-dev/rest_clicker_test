@@ -3,7 +3,14 @@
     "rootNamespace": "",
     "references": [
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:d0acddb179989574c8355991596bd3e6"
+        "GUID:d0acddb179989574c8355991596bd3e6",
+        "GUID:3ada9561ca6d096478d7bbaaaf48a721",
+        "Game.UI",
+        "Game.CurrencySystem",
+        "Game.Clicker",
+        "Game.Network",
+        "Game.Weather",
+        "Game.Breeds"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

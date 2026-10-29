@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f507f9afc680841a380517e37cbb6c, type: 3}
+  m_Name: Currency Config
+  m_EditorClassIdentifier: Game.CurrencySystem::_Project.Scripts.CurrencySystem.CurrencyConfig
+  _currencies:
+  - _type: 0
+    _defaultValue: 0
+    _hasMaxValue: 0
+    _maxValue: 0
+  - _type: 1
+    _defaultValue: 1000
+    _hasMaxValue: 1
+    _maxValue: 1000

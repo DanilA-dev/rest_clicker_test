@@ -5,6 +5,6 @@ namespace _Project.Scripts.Network
 {
     public interface IRequest<TResult>
     {
-        public UniTask<TResult> Execute(CancellationTokenSource cToken);
+        public UniTask<TResult> Execute(CancellationToken token);
     }
 }

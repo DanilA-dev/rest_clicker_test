@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faba40fc49bf0924486c42067fd22898, type: 3}
+  m_Name: UI Config
+  m_EditorClassIdentifier: Game.UI::_Project.Scripts.UI.Configs.UIConfig
+  _viewContainerPrefab: {fileID: 4418756792222958246, guid: 9892eee19a098374ba0093710c3ca546, type: 3}
+  _menus:
+  - {fileID: 3328184646416501292, guid: 72bbaaef52ab2b744a68a8b7d716b001, type: 3}
+  - {fileID: 3186295025080866615, guid: 9f383d8563dfe7741bdbb501e694b527, type: 3}
+  - {fileID: 873388107315152723, guid: a03e1cc32664125419f8252741bd87f0, type: 3}
+  - {fileID: 1161999436597613511, guid: 41864ad5625779f4d920846f3cac8416, type: 3}
+  - {fileID: 8443338878759358244, guid: 306877fdcae0a444bb172a5906e845b0, type: 3}
+  - {fileID: 3131644405694896378, guid: fa7ec0af971bb2c42b01e0583866c1b3, type: 3}
+  _clickPopupPrefab: {fileID: 4033907891511992149, guid: a1b5c94913a20364cb38bb70763eabd9, type: 3}
+  _clickPopupPoolSize: 10
+  _breedItemPrefab: {fileID: 5391294946882070521, guid: 67bd40428afe12946ab39024cd82e855, type: 3}
+  _breedItemPoolSize: 10
